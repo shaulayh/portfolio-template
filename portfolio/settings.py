@@ -126,38 +126,3 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 
 django_heroku.settings(locals())
-
-# Default primary key field type
-# https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
-
-DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-
-PWA_APP_NAME = 'geeksforgeeks'
-PWA_APP_DESCRIPTION = "GeeksForGeeks PWA"
-PWA_APP_THEME_COLOR = '#000000'
-PWA_APP_BACKGROUND_COLOR = '#ffffff'
-PWA_APP_DISPLAY = 'standalone'
-PWA_APP_SCOPE = '/'
-PWA_APP_ORIENTATION = 'any'
-PWA_APP_START_URL = '/'
-PWA_APP_STATUS_BAR_COLOR = 'default'
-PWA_APP_ICONS = [
-    {
-        'src': 'static/images/icons/icon-152x152.png',
-        'sizes': '152x152'
-    }
-]
-PWA_APP_ICONS_APPLE = [
-    {
-        'src': 'static/images/icons/icon-152x152.png',
-        'sizes': '152x152'
-    }
-]
-PWA_APP_SPLASH_SCREEN = [
-    {
-        'src': 'static/images/icons/icon-152x152.png',
-        'media': '(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)'
-    }
-]
-PWA_APP_DIR = 'ltr'
-PWA_APP_LANG = 'en-US'
