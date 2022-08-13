@@ -1,0 +1,231 @@
+{% load static %}
+{% load pwa %}
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ===== CSS ===== -->
+    <link rel="stylesheet" href="{% static 'assets/css/styles.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/lightbox.min.css' %}">
+
+    <!-- ===== BOX ICONS ===== -->
+    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+    {% progressive_web_app_meta %}
+    <link rel="manifest" href="manifest.json">
+    <title>Portfolio responsive complete</title>
+</head>
+<body>
+<!--===== HEADER =====-->
+<header class="l-header">
+    <nav class="nav bd-grid">
+        <div>
+            <a href="#" class="nav__logo">Chantel Charles</a>
+        </div>
+
+        <div class="nav__menu" id="nav-menu">
+            <ul class="nav__list">
+                <li class="nav__item"><a href="#home" class="nav__link active">Home</a></li>
+                <li class="nav__item"><a href="#portfolio" class="nav__link">Portfolio</a></li>
+                <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
+            </ul>
+        </div>
+
+        <div class="nav__toggle" id="nav-toggle">
+            <i class='bx bx-menu'></i>
+        </div>
+    </nav>
+</header>
+
+<main class="l-main">
+    <!--===== HOME =====-->
+    <section class="home" id="home">
+        <div class="home__container bd-grid">
+            <h1 class="home__title"><span>Chantal </span><br>Charles.</h1>
+
+            <div class="home__scroll">
+                <a href="#about" class="home__scroll-link"><i class='bx bx-up-arrow-alt'></i>Scroll down</a>
+            </div>
+
+            <img src="{% static 'assets/img/chanti2.png' %}" alt="" class="home__img">
+        </div>
+    </section>
+
+    <section>
+        <div class="measurement-container">
+            <div class="measurements-talent">
+                <div class="measurement-talent">
+                    <span class="measurement-label">Height&nbsp;&nbsp;</span>
+                    <span class="measurement-value">5'10'' 1/2</span>
+                </div>
+                <div class="measurement-talent">
+                    <span class="measurement-label">Bust&nbsp;&nbsp;</span>
+                    <span class="measurement-value">33'' 1/2</span>
+                </div>
+                <div class="measurement-talent">
+                    <span class="measurement-label">Waist&nbsp;&nbsp;</span>
+                    <span class="measurement-value">23''</span>
+                </div>
+                <div class="measurement-talent">
+                    <span class="measurement-label">Hips&nbsp;&nbsp;</span>
+                    <span class="measurement-value">34'' 1/2</span>
+                </div>
+                <div class="measurement-talent">
+                    <span class="measurement-label">Shoe&nbsp;&nbsp;</span>
+                    <span class="measurement-value">8 1/2 </span>
+                </div>
+                <div class="measurement-talent">
+                    <span class="measurement-label">Hair&nbsp;&nbsp;</span>
+                    <span class="measurement-value">Dark Brown</span>
+                </div>
+                <div class="measurement-talent">
+                    <span class="measurement-label">Eyes&nbsp;&nbsp;</span>
+                    <span class="measurement-value">Brown</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--===== PORTFOLIO =====-->
+    <section class="portfolio section" id="portfolio">
+        <h2 class="section-title">Portfolio</h2>
+
+        <div class="portfolio__container bd-grid">
+            <div class="portfolio__img">
+                <img src="{% static 'assets/img/dsc1.jpg' %}" alt="">
+
+                <div class="portfolio__link">
+                    <a href="{% static 'assets/img/dsc1.jpg' %}" data-lightbox="mygallery">View details</a>
+                </div>
+            </div>
+            <div class="portfolio__img">
+                <img src="{% static 'assets/img/dsc2.jpg' %}" alt="">
+
+                <div class="portfolio__link">
+                    <a href="{% static 'assets/img/dsc2.jpg' %}" data-lightbox="mygallery">View details</a>
+                </div>
+            </div>
+            <div class="portfolio__img">
+                <img src="{% static 'assets/img/dsc3.jpg' %}" alt="">
+
+                <div class="portfolio__link">
+                    <a href="{% static 'assets/img/dsc3.jpg' %}" data-lightbox="mygallery">View details</a>
+                </div>
+            </div>
+            <div class="portfolio__img">
+                <img src="{% static 'assets/img/dsc4.jpg' %}" alt="">
+
+                <div class="portfolio__link">
+                    <a href="{% static 'assets/img/dsc4.jpg' %}" data-lightbox="mygallery">View details</a>
+                </div>
+            </div>
+            <div class="portfolio__img">
+                <img src="{% static 'assets/img/dsc5.jpg' %}" alt="">
+
+                <div class="portfolio__link">
+                    <a href="{% static 'assets/img/dsc5.jpg' %}" data-lightbox="mygallery">View details</a>
+                </div>
+            </div>
+            <div class="portfolio__img">
+                <img src="{% static 'assets/img/dsc6.jpg' %}" alt="">
+
+                <div class="portfolio__link">
+                    <a href="{% static 'assets/img/dsc6.jpg' %}" data-lightbox="mygallery">View details</a>
+                </div>
+            </div>
+            <div class="portfolio__img">
+                <img src="{% static 'assets/img/dsc7.jpg' %}" alt="">
+
+                <div class="portfolio__link">
+                    <a href="{% static 'assets/img/dsc7.jpg' %}" data-lightbox="mygallery">View details</a>
+                </div>
+            </div>
+            <div class="portfolio__img">
+                <img src="{% static 'assets/img/dsc1.jpg' %}" alt="">
+
+                <div class="portfolio__link">
+                    <a href="{% static 'assets/img/dsc1.jpg' %}" data-lightbox="mygallery">View details</a>
+                </div>
+            </div>
+            <div class="portfolio__img">
+                <img src="{% static 'assets/img/dsc1.jpg' %}" alt="">
+
+                <div class="portfolio__link">
+                    <a href="{% static 'assets/img/dsc1.jpg' %}" data-lightbox="mygallery">View details</a>
+                </div>
+            </div>
+            <div class="portfolio__img">
+                <img src="{% static 'assets/img/dsc9.jpg' %}" alt="">
+
+                <div class="portfolio__link">
+                    <a href="{% static 'assets/img/dsc9.jpg' %}" data-lightbox="mygallery">View details</a>
+                </div>
+            </div>
+            <div class="portfolio__img">
+                <img src="{% static 'assets/img/dsc10.jpg' %}" alt="">
+
+                <div class="portfolio__link">
+                    <a href="{% static 'assets/img/dsc10.jpg' %}" data-lightbox="mygallery">View details</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--===== CONTACT =====-->
+    <section class="contact section" id="contact">
+        <h2 class="section-title">Contact</h2>
+        <div class="contact__container bd-grid">
+            <div class="contact__info">
+                <h3 class="contact__subtitle">EMAIL <span><i class='bx bxs-envelope'></i></span></h3>
+                <p class="contact__text">shaulayham@yahoo.com</p>
+                <span class="contact__text">info.mail.com</span>
+
+                <h3 class="contact__subtitle">PHONE</h3>
+                <span class="contact__text">+48729344581</span>
+
+                <h3 class="contact__subtitle">ADDRESS</h3>
+                <span class="contact__text">Ul.Sikorskiego 42/70 , katowice. 40-276.Poland</span>
+            </div>
+            <div>
+                <a href="#" class="footer__social"><i class='bx bx-border-circle bx-burst-hover bxl-facebook'></i></a>
+                <a href="#" class="footer__social"><i class='bx bx-border-circle bx-burst-hover bxl-instagram'></i></a>
+                <a href="#" class="footer__social"><i class='bx bx-border-circle bx-burst-hover bxl-twitter'></i></a>
+            </div>
+
+        </div>
+    </section>
+</main>
+
+<!--===== FOOTER =====-->
+<footer class="footer section">
+    <div class="footer__container bd-grid">
+        <div class="footer__data">
+            <h2 class="footer__title">EXPLORE</h2>
+            <ul>
+                <li><a href="#home" class="footer__link">Home</a></li>
+                <li><a href="#about" class="footer__link">About</a></li>
+                <li><a href="#skills" class="footer__link">Skills</a></li>
+                <li><a href="#portfolio" class="footer__link">Portfolio</a></li>
+                <li><a href="#Contact" class="footer__link">Contact</a></li>
+            </ul>
+        </div>
+
+        <div class="footer__data">
+            <h2 class="footer__title">FOLLOW</h2>
+            <a href="#" class="footer__social"><i class='bx bxl-facebook'></i></a>
+            <a href="#" class="footer__social"><i class='bx bxl-instagram'></i></a>
+            <a href="#" class="footer__social"><i class='bx bxl-twitter'></i></a>
+        </div>
+    </div>
+</footer>
+
+<!--===== SCROLL REVEAL =====-->
+<script src="https://unpkg.com/scrollreveal"></script>
+<!--===== MAIN JS =====-->
+<script src="{% static 'assets/js/main.js' %}"></script>
+<script src="{% static 'assets/js/lightbox-plus-jquery.min.js' %}"></script>
+</body>
+</html>

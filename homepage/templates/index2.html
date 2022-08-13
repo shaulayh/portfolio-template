@@ -1,0 +1,223 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+{% load pwa %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'assets/css/styles2.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/lightbox.min.css'%}">
+    <!-- ===== BOX ICONS ===== -->
+    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+    {% progressive_web_app_meta %}
+    <title>My Portfolio</title>
+</head>
+<body>
+
+<header class="l-header">
+    <div class="carousel" data-carousel>
+        <div class="header">
+            <ul>
+                <li><a href="https://www.instagram.com/chail.een/?hl=en" class="footer__social"><i
+                        class='bx bx-border-circle bx-burst-hover bxl-instagram'></i></a>
+                </li>
+            </ul>
+        </div>
+        <button class="carousel-button prev" data-carousel-button="prev">&#171;</button>
+        <button class="carousel-button next" data-carousel-button="next">&#187;</button>
+        <div class="container carousel-text">
+            <h1>Chantal Charles </h1>
+            <div class="carousel-link">
+                <a href="#portfolio">Portfolio</a>
+                <a href="#mywork">My Work</a>
+                <a href="https://www.instagram.com/chail.een/?hl=en">Instagram</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+
+        <ul data-slides>
+            <li class="slide" data-active>
+                <img src="{% static 'assets/img/dsc2.jpg' %}" alt="Nature Image #1">
+
+            </li>
+            <li class="slide">
+                <img src="{% static 'assets/img/dsc3.jpg' %}" alt="Nature Image #2">
+            </li>
+            <li class="slide">
+                <img src="{% static 'assets/img/dsc4.jpg' %}" alt="Nature Image #3">
+            </li>
+        </ul>
+    </div>
+</header>
+
+<main class="l-main">
+    <section>
+        <div class="measurement-container">
+            <div class="measurements-talent">
+                <div class="measurement-talent">
+                    <span class="measurement-label">Height&nbsp;&nbsp;</span>
+                    <span class="measurement-value">5'10'' 1/2</span>
+                </div>
+                <div class="measurement-talent">
+                    <span class="measurement-label">Bust&nbsp;&nbsp;</span>
+                    <span class="measurement-value">33'' 1/2</span>
+                </div>
+                <div class="measurement-talent">
+                    <span class="measurement-label">Waist&nbsp;&nbsp;</span>
+                    <span class="measurement-value">23''</span>
+                </div>
+                <div class="measurement-talent">
+                    <span class="measurement-label">Hips&nbsp;&nbsp;</span>
+                    <span class="measurement-value">34'' 1/2</span>
+                </div>
+                <div class="measurement-talent">
+                    <span class="measurement-label">Shoe&nbsp;&nbsp;</span>
+                    <span class="measurement-value">8 1/2 </span>
+                </div>
+                <div class="measurement-talent">
+                    <span class="measurement-label">Hair&nbsp;&nbsp;</span>
+                    <span class="measurement-value">Dark Brown</span>
+                </div>
+                <div class="measurement-talent">
+                    <span class="measurement-label">Eyes&nbsp;&nbsp;</span>
+                    <span class="measurement-value">Brown</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--===== PORTFOLIO =====-->
+    <section class="portfolio section" id="portfolio">
+        <h2 class="section-title">Portfolio</h2>
+
+        <div class="portfolio__container bd-grid">
+            {% for portfolio in portfolio_images %}
+            <div class="portfolio__img">
+                <img src="{{portfolio.image_file.url}}" alt="">
+
+                <div class="portfolio__link">
+                    <a href="{{portfolio.image_file.url}}" data-lightbox="mygallery">View details</a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+    <section class="my_work section">
+        <h2 class="section-title">My work</h2>
+        <div>
+            <p>Videos and album of photos to be here</p>
+            <div class="portfolio__container bd-grid work_container">
+                <div class="card">
+                    <div class="card-img">
+                        <img src="{% static 'assets/img/dsc5.jpg' %}" alt="">
+                    </div>
+                    <div class="content">
+                        <h3>Title of Card</h3>
+                        <button class="card-button">View Project</button>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, alk kfa k alfk </p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-img">
+                        <img src="{% static 'assets/img/dsc5.jpg' %}" alt="">
+                    </div>
+                    <div class="content">
+                        <h3>Title of Card</h3>
+                        <button class="card-button">View Project</button>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, alk kfa k alfk </p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-img">
+                        <img src="{% static 'assets/img/dsc5.jpg' %}" alt="">
+                    </div>
+                    <div class="content">
+                        <h3>Title of Card</h3>
+                        <button class="card-button">View Project</button>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, alk kfa k alfk </p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-img">
+                        <img src="{% static 'assets/img/dsc5.jpg' %}" alt="">
+                    </div>
+                    <div class="content">
+                        <h3>Title of Card</h3>
+                        <button class="card-button">View Project</button>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, alk kfa k alfk </p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-img">
+                        <img src="{% static 'assets/img/dsc5.jpg' %}" alt="">
+                    </div>
+                    <div class="content">
+                        <h3>Title of Card</h3>
+                        <button class="card-button">View Project</button>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, alk kfa k alfk </p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-img">
+                        <img src="{% static 'assets/img/dsc5.jpg' %}" alt="">
+                    </div>
+                    <div class="content">
+                        <h3>Title of Card</h3>
+                        <button class="card-button">View Project</button>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, alk kfa k alfk </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <h2 class="section-title">About</h2>
+        <div class="portfolio__container">
+            <h1 class="about_title">Welcome message here</h1>
+            <p class="about_content">
+                ajklfj jfkajfkjk jjfajf kjfkaj kjf jfkj kfjk jf jfk jfkj akjfkjfdiefji kfeji fie jifhei
+                ieheifdjakfjeihehffi
+                ajklfj jfkajfkjk jjfajf kjfkaj kjf
+        </div>
+    </section>
+
+    <!--===== CONTACT =====-->
+    <section class="contact section" id="contact">
+        <h2 class="section-title">Contact</h2>
+        <div class="contact__container bd-grid">
+            <div class="contact__info">
+                <h3 class="contact__subtitle">EMAIL <span><i class='bx bxs-envelope'></i></span></h3>
+                <p class="contact__text">shaulayham@yahoo.com</p>
+                <span class="contact__text">info.mail.com</span>
+
+                <h3 class="contact__subtitle">PHONE</h3>
+                <span class="contact__text">+48729344581</span>
+
+                <h3 class="contact__subtitle">ADDRESS</h3>
+                <span class="contact__text">Ul.Sikorskiego 42/70 , katowice. 40-276.Poland</span>
+            </div>
+            <div>
+                <a href="#" class="footer__social"><i class='bx bx-border-circle bx-burst-hover bxl-facebook'></i></a>
+                <a href="#" class="footer__social"><i class='bx bx-border-circle bx-burst-hover bxl-instagram'></i></a>
+                <a href="#" class="footer__social"><i class='bx bx-border-circle bx-burst-hover bxl-twitter'></i></a>
+            </div>
+
+        </div>
+    </section>
+</main>
+
+<!--===== FOOTER =====-->
+<footer class="footer section">
+    <div class="footer_container">
+        <p class="footer__title">&copy; 2022 Sholag International.</p>
+    </div>
+</footer>
+</body>
+<!--===== SCROLL REVEAL =====-->
+<script src="https://unpkg.com/scrollreveal"></script>
+<!--===== MAIN JS =====-->
+<script src="{% static 'assets/js/main2.js' %}"></script>
+<script src="{% static 'assets/js/lightbox-plus-jquery.min.js' %}"></script>
+</html>
