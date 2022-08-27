@@ -7,5 +7,5 @@ from . import views
 
 urlpatterns = [
     path('', views.index, name="home"),
-    path('client', views.show, name="show"),
+    path('/client', views.show, name="show"),
 ]
