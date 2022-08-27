@@ -17,12 +17,12 @@ from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import path
-from homepage.views import show
+from homepage.views import index
 
 urlpatterns = [
 
     # path('home/', include('homepage.urls')),
-    path('home/', show, name='home'),
+    path('home/', index, name='home'),
     path('admin/', admin.site.urls),
     # re_path('', include('pwa.urls')),
 
